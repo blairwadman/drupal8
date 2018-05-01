@@ -3,3 +3,9 @@ global-styling:
   css:
     base:
       css/style.css: {}
+  js:
+    js/workshop.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
