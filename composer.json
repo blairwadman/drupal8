@@ -6,7 +6,8 @@
     "require": {
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+        "cweagans/composer-patches": "^1.6"
     },
     "require-dev": {
         "drupal/devel": "^1.2"
@@ -44,6 +45,11 @@
             "drush/contrib/{$name}": ["type:drupal-drush"],
             "modules/custom/{$name}": ["type:drupal-custom-module"],
             "themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "patches": {
+            "drupal/console": {
+                "Drupal Console fix": "https://patch-diff.githubusercontent.com/raw/hechoendrupal/drupal-console/pull/3865.patch"
+            }
         }
     },
     "autoload": {
